@@ -1,0 +1,166 @@
+/* Global layout */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #4e2a12;
+  color: #111827;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #fff5e4;
+  background-color: #1b0d05;
+  padding: 0.8rem 0;
+  border-radius: 0.75rem;
+  width: 674px; /* align with .teams width */
+  text-align: center;
+}
+
+.hero-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  min-height: 56px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-image {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+/* Teams layout */
+.teams {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Team cards */
+section {
+  background: #eed0a9;
+  border-radius: 0.75rem;
+  padding: 0.6rem 1.4rem 1.1rem;
+  margin: 0.75rem 0;
+  width: 280px;
+  min-height: 420px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.controls {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.6rem;
+}
+
+.score-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0.75rem; /* match h2 bottom margin for equal spacing */
+}
+
+.card-image-placeholder {
+  width: 100%;
+  height: 120px;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(59, 34, 15, 0.45);
+  background-color: rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #fff5e4; /* very light beige */
+  background-color: #2a1408; /* darker chocolate fill */
+  padding: 0.85rem 0.9rem;
+  border-radius: 0.5rem;
+}
+
+section p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #3b220f;
+}
+
+section span[id^="score-"] {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.4rem 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(59, 34, 15, 0.45);
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #2a1408; /* dark chocolate */
+}
+
+/* Buttons */
+button {
+  margin: 0;
+  flex: 1;
+  padding: 0.75rem 0;
+  border-radius: 0.4rem;
+  border: 1px solid currentColor;
+  background-color: #fbe7c5; /* lighter beige than card */
+  font-size: 2.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease, border-color 0.1s ease;
+}
+
+button#increment-a,
+button#increment-b {
+  color: #2a1408; /* dark chocolate */
+  box-shadow: 0 4px 10px rgba(26, 12, 4, 0.4);
+}
+
+button#decrement-a,
+button#decrement-b {
+  color: #2a1408; /* dark chocolate */
+  box-shadow: 0 4px 10px rgba(26, 12, 4, 0.4);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  background-color: #fff1da;
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.18);
+}
+
+button:active {
+  transform: translateY(1px);
+  background-color: #2a1408; /* invert to dark chocolate */
+  color: #fbe7c5; /* light beige symbol */
+  border-color: #2a1408;
+  box-shadow: 0 1px 3px rgba(15, 8, 3, 0.4);
+}

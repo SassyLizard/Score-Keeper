@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Crumb Score Keeper</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playwrite+AT:wght@100..400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>How Many Crumbs</h1>
+
+  <div class="hero-row">
+    <img src="Images/Hero-Spaghetto.png" alt="" class="hero-image" />
+  </div>
+
+  <div class="teams">
+    <section id="team-a">
+      <h2>Team Croissant</h2>
+      <div class="card-image-placeholder">
+        <img src="Images/Team_Croissant.png?v=2" alt="Team Croissant" />
+      </div>
+      <div class="score-wrapper">
+        <span id="score-a">0</span>
+      </div>
+      <div class="controls">
+        <button id="increment-a">+</button>
+        <button id="decrement-a">−</button>
+      </div>
+    </section>
+
+    <section id="team-b">
+      <h2>Team Pain au Chocolat</h2>
+      <div class="card-image-placeholder">
+        <img src="Images/Team_Pain-au-Chocolat.png?v=3" alt="Team Pain au Chocolat" />
+      </div>
+      <div class="score-wrapper">
+        <span id="score-b">0</span>
+      </div>
+      <div class="controls">
+        <button id="increment-b">+</button>
+        <button id="decrement-b">−</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
