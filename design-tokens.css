@@ -1,24 +1,55 @@
 /* Design tokens */
 :root {
-  /* Color tokens – edit these to change the palette */
-  --color-bg-body: #4e2a12;
-  --color-text-body: #111827;
-  --color-text-on-dark: #fff5e4;
-  --color-bg-page-header: #1b0d05;
-  --color-bg-card: #eed0a9;
-  --color-bg-card-header: #2a1408;
-  --color-text-card-body: #3b220f;
-  --color-border-soft-dark: rgba(59, 34, 15, 0.45);
-  --color-bg-image-placeholder: rgba(255, 255, 255, 0.3);
-  --color-bg-score: rgba(255, 255, 255, 0.8);
-  --color-bg-button: #fbe7c5;
-  --color-bg-button-hover: #fff1da;
-  --color-bg-button-active: #2a1408;
-  --color-text-button-active: #fbe7c5;
-  --color-shadow-soft: rgba(15, 23, 42, 0.08);
-  --color-shadow-strong: rgba(15, 23, 42, 0.18);
-  --color-shadow-button: rgba(26, 12, 4, 0.4);
-  --color-shadow-button-active: rgba(15, 8, 3, 0.4);
+  /* Base color palette – edit only these to shift the whole palette */
+  --color-base-brown: #4e2a12;
+  --color-base-brown-dark: #2a1408;
+  --color-base-brown-darkest: #1b0d05;
+  --color-base-brown-muted: #3b220f;
+  --color-base-tan: #eed0a9;
+  --color-base-cream: #fff5e4;
+  --color-base-beige: #fbe7c5;
+  --color-base-beige-light: #fff1da;
+  --color-base-ink: #111827;
+  --color-base-white: #ffffff;
+  /* RGB values for overlays/shadows (use in rgba(var(--name), opacity)) */
+  --color-base-brown-muted-rgb: 59, 34, 15;
+  --color-base-shadow-cool-rgb: 15, 23, 42;
+  --color-base-shadow-warm-rgb: 26, 12, 4;
+  --color-base-shadow-warm-dark-rgb: 15, 8, 3;
+
+  /* Semantic colors – reference base palette above; avoid editing unless adding roles */
+  --color-background: var(--color-base-brown);
+  --color-text: var(--color-base-ink);
+  --color-text-on-dark: var(--color-base-cream);
+  --color-surface: var(--color-base-tan);
+  --color-surface-elevated: var(--color-base-beige);
+  --color-surface-elevated-hover: var(--color-base-beige-light);
+  --color-surface-overlay: var(--color-base-white);
+  --color-accent: var(--color-base-brown-dark);
+  --color-accent-strong: var(--color-base-brown-darkest);
+  --color-text-muted: var(--color-base-brown-muted);
+  --color-border: rgba(var(--color-base-brown-muted-rgb), 0.45);
+  --color-overlay-light: rgba(255, 255, 255, 0.3);
+  --color-overlay-medium: rgba(255, 255, 255, 0.8);
+  --color-shadow-soft: rgba(var(--color-base-shadow-cool-rgb), 0.08);
+  --color-shadow-strong: rgba(var(--color-base-shadow-cool-rgb), 0.18);
+  --color-shadow-button: rgba(var(--color-base-shadow-warm-rgb), 0.4);
+  --color-shadow-button-active: rgba(var(--color-base-shadow-warm-dark-rgb), 0.4);
+
+  /* Legacy semantic names – map to semantic tokens (use semantic names in new code) */
+  --color-bg-body: var(--color-background);
+  --color-text-body: var(--color-text);
+  --color-bg-page-header: var(--color-accent-strong);
+  --color-bg-card: var(--color-surface);
+  --color-bg-card-header: var(--color-accent);
+  --color-text-card-body: var(--color-text-muted);
+  --color-border-soft-dark: var(--color-border);
+  --color-bg-image-placeholder: var(--color-overlay-light);
+  --color-bg-score: var(--color-overlay-medium);
+  --color-bg-button: var(--color-surface-elevated);
+  --color-bg-button-hover: var(--color-surface-elevated-hover);
+  --color-bg-button-active: var(--color-accent);
+  --color-text-button-active: var(--color-surface-elevated);
 
   /* Spacing tokens – edit these to adjust layout rhythm */
   --space-0: 0;
