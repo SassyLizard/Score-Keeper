@@ -28,6 +28,7 @@ const incrementAButton = document.getElementById("increment-a");
 const decrementAButton = document.getElementById("decrement-a");
 const incrementBButton = document.getElementById("increment-b");
 const decrementBButton = document.getElementById("decrement-b");
+const resetButton = document.getElementById("reset");
 
 // Update the displayed scores
 function updateScores() {
@@ -43,9 +44,11 @@ function incrementScoreA() {
 }
 
 function decrementScoreA() {
-  scoreA--;
-  updateScores();
-  saveScores();
+  if (scoreA > 0) {
+    scoreA--;
+    updateScores();
+    saveScores();
+  }
 }
 
 // Team B controls
@@ -56,7 +59,16 @@ function incrementScoreB() {
 }
 
 function decrementScoreB() {
-  scoreB--;
+  if (scoreB > 0) {
+    scoreB--;
+    updateScores();
+    saveScores();
+  }
+}
+
+function resetScores() {
+  scoreA = 0;
+  scoreB = 0;
   updateScores();
   saveScores();
 }
@@ -66,6 +78,7 @@ incrementAButton.addEventListener("click", incrementScoreA);
 decrementAButton.addEventListener("click", decrementScoreA);
 incrementBButton.addEventListener("click", incrementScoreB);
 decrementBButton.addEventListener("click", decrementScoreB);
+resetButton.addEventListener("click", resetScores);
 
 // Load any saved scores, then initialize display
 loadScores();
