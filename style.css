@@ -1,23 +1,25 @@
+@import "design-tokens.css";
+
 /* Global layout */
 body {
-  margin: 0;
+  margin: var(--space-0);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: #4e2a12;
-  color: #111827;
+  font-family: var(--font-family-base);
+  background-color: var(--color-bg-body);
+  color: var(--color-text-body);
 }
 
 h1 {
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
-  color: #fff5e4;
-  background-color: #1b0d05;
-  padding: 0.8rem 0;
-  border-radius: 0.75rem;
+  margin-bottom: var(--space-6xl);
+  font-size: var(--font-size-h1);
+  color: var(--color-text-on-dark);
+  background-color: var(--color-bg-page-header);
+  padding: var(--space-xl) 0;
+  border-radius: var(--radius-lg);
   width: 674px; /* align with .teams width */
   text-align: center;
 }
@@ -26,34 +28,34 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.25rem;
+  gap: var(--space-2xs);
   min-height: 56px;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-5xl);
 }
 
 .hero-image {
   height: 56px;
   width: auto;
   object-fit: contain;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
 }
 
 /* Teams layout */
 .teams {
   display: flex;
-  gap: 1.5rem;
+  gap: var(--space-5xl);
 }
 
 /* Team cards */
 section {
-  background: #eed0a9;
-  border-radius: 0.75rem;
-  padding: 0.6rem 1.4rem 1.1rem;
-  margin: 0.75rem 0;
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md) var(--space-4xl) var(--space-3xl);
+  margin: var(--space-lg) 0;
   width: 280px;
   min-height: 420px;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 10px 25px var(--color-shadow-soft);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -62,8 +64,8 @@ section {
 
 .controls {
   display: flex;
-  gap: 0.75rem;
-  margin-top: 0.6rem;
+  gap: var(--space-lg);
+  margin-top: var(--space-md);
 }
 
 .score-wrapper {
@@ -71,15 +73,15 @@ section {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 0.75rem; /* match h2 bottom margin for equal spacing */
+  margin-top: var(--space-lg); /* match h2 bottom margin for equal spacing */
 }
 
 .card-image-placeholder {
   width: 100%;
   height: 120px;
-  border-radius: 0.5rem;
-  border: 1px solid rgba(59, 34, 15, 0.45);
-  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-md);
+  border: var(--border-width-thin) solid var(--color-border-soft-dark);
+  background-color: var(--color-bg-image-placeholder);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -93,45 +95,45 @@ section {
 }
 
 section h2 {
-  margin-top: 0;
-  margin-bottom: 0.75rem;
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #fff5e4; /* very light beige */
-  background-color: #2a1408; /* darker chocolate fill */
-  padding: 0.85rem 0.9rem;
-  border-radius: 0.5rem;
+  margin-top: var(--space-0);
+  margin-bottom: var(--space-lg);
+  font-size: var(--font-size-section-title);
+  font-weight: var(--font-weight-heading);
+  color: var(--color-text-on-dark); /* very light beige */
+  background-color: var(--color-bg-card-header); /* darker chocolate fill */
+  padding: var(--space-3xl) var(--space-2xl);
+  border-radius: var(--radius-md);
 }
 
 section p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-  color: #3b220f;
+  font-size: var(--font-size-body);
+  margin-bottom: var(--space-5xl);
+  color: var(--color-text-card-body);
 }
 
 section span[id^="score-"] {
   display: block;
   width: 100%;
   text-align: center;
-  padding: 0.4rem 0;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(59, 34, 15, 0.45);
-  border-radius: 0.5rem;
-  font-weight: 700;
-  font-size: 2.4rem;
-  color: #2a1408; /* dark chocolate */
+  padding: var(--space-xs) 0;
+  background-color: var(--color-bg-score);
+  border: var(--border-width-thin) solid var(--color-border-soft-dark);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-score);
+  font-size: var(--font-size-score);
+  color: var(--color-bg-card-header); /* dark chocolate */
 }
 
 /* Buttons */
 button {
   margin: 0;
   flex: 1;
-  padding: 0.75rem 0;
-  border-radius: 0.4rem;
-  border: 1px solid currentColor;
-  background-color: #fbe7c5; /* lighter beige than card */
-  font-size: 2.3rem;
-  font-weight: 600;
+  padding: var(--space-lg) 0;
+  border-radius: var(--radius-sm);
+  border: var(--border-width-thin) solid currentColor;
+  background-color: var(--color-bg-button); /* lighter beige than card */
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-button);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -141,26 +143,26 @@ button {
 
 button#increment-a,
 button#increment-b {
-  color: #2a1408; /* dark chocolate */
-  box-shadow: 0 4px 10px rgba(26, 12, 4, 0.4);
+  color: var(--color-bg-card-header); /* dark chocolate */
+  box-shadow: 0 4px 10px var(--color-shadow-button);
 }
 
 button#decrement-a,
 button#decrement-b {
-  color: #2a1408; /* dark chocolate */
-  box-shadow: 0 4px 10px rgba(26, 12, 4, 0.4);
+  color: var(--color-bg-card-header); /* dark chocolate */
+  box-shadow: 0 4px 10px var(--color-shadow-button);
 }
 
 button:hover {
   transform: translateY(-3px);
-  background-color: #fff1da;
-  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.18);
+  background-color: var(--color-bg-button-hover);
+  box-shadow: 0 6px 14px var(--color-shadow-strong);
 }
 
 button:active {
   transform: translateY(1px);
-  background-color: #2a1408; /* invert to dark chocolate */
-  color: #fbe7c5; /* light beige symbol */
-  border-color: #2a1408;
-  box-shadow: 0 1px 3px rgba(15, 8, 3, 0.4);
+  background-color: var(--color-bg-button-active); /* invert to dark chocolate */
+  color: var(--color-text-button-active); /* light beige symbol */
+  border-color: var(--color-bg-button-active);
+  box-shadow: 0 1px 3px var(--color-shadow-button-active);
 }

@@ -1,0 +1,53 @@
+/* Design tokens */
+:root {
+  /* Color tokens – edit these to change the palette */
+  --color-bg-body: #4e2a12;
+  --color-text-body: #111827;
+  --color-text-on-dark: #fff5e4;
+  --color-bg-page-header: #1b0d05;
+  --color-bg-card: #eed0a9;
+  --color-bg-card-header: #2a1408;
+  --color-text-card-body: #3b220f;
+  --color-border-soft-dark: rgba(59, 34, 15, 0.45);
+  --color-bg-image-placeholder: rgba(255, 255, 255, 0.3);
+  --color-bg-score: rgba(255, 255, 255, 0.8);
+  --color-bg-button: #fbe7c5;
+  --color-bg-button-hover: #fff1da;
+  --color-bg-button-active: #2a1408;
+  --color-text-button-active: #fbe7c5;
+  --color-shadow-soft: rgba(15, 23, 42, 0.08);
+  --color-shadow-strong: rgba(15, 23, 42, 0.18);
+  --color-shadow-button: rgba(26, 12, 4, 0.4);
+  --color-shadow-button-active: rgba(15, 8, 3, 0.4);
+
+  /* Spacing tokens – edit these to adjust layout rhythm */
+  --space-0: 0;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.4rem;
+  --space-sm: 0.5rem;
+  --space-md: 0.6rem;
+  --space-lg: 0.75rem;
+  --space-xl: 0.8rem;
+  --space-2xl: 0.9rem;
+  --space-3xl: 1.1rem;
+  --space-4xl: 1.4rem;
+  --space-5xl: 1.5rem;
+  --space-6xl: 2rem;
+
+  /* Typography tokens – edit these for type scale and feel */
+  --font-family-base: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-size-h1: 2.5rem;
+  --font-size-section-title: 1.1rem;
+  --font-size-body: 1.1rem;
+  --font-size-score: 2.4rem;
+  --font-size-button: 2.3rem;
+  --font-weight-heading: 500;
+  --font-weight-score: 700;
+  --font-weight-button: 600;
+
+  /* Borders & radii – edit these for overall softness/sharpness */
+  --radius-sm: 0.4rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --border-width-thin: 1px;
+}
